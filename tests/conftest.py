@@ -6,7 +6,7 @@ from pages.order_form_page import OrderFormPage
 from data_tests import BASE_URL
 
 
-@@ -19,8 +19,3 @@ def home_page(driver):
+def home_page(driver):
     home_page.close_cookie_window()
     return home_page
 

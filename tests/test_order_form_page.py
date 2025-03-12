@@ -1,5 +1,5 @@
+import allure
 from data_tests import user_1, user_2
-
 class TestOrderForm:
     @staticmethod
     def order_page(driver):
