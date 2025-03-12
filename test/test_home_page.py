@@ -17,7 +17,7 @@ class TestHomePageSamokat:
         (TestHomePageLocators.ACCORDION_BUTTON_FAQ_7, TestHomePageLocators.ANSWER_FAQ_7, expected_texts['faq7']),
         (TestHomePageLocators.ACCORDION_BUTTON_FAQ_8, TestHomePageLocators.ANSWER_FAQ_8, expected_texts['faq8'])])
     def test_click_question_shows_answer_faq(self, driver, home_page, question_locator, answer_locator, expected_text):
-        home_page.scroll_to_faq()ё
+        home_page.scroll_to_faq()
         home_page.click_the_question(question_locator)
         answer = home_page.get_the_answer_text(answer_locator)
         assert answer == expected_text
@@ -28,8 +28,6 @@ class TestHomePageSamokat:
         home_page.click_logo_yandex_open_dzen_page()
         current_url = home_page.get_current_url()
         assert current_url == DZEN_URL
-        # Возвращаемся на исходную вкладку для последующих тестов
-        home_page.switch_to_original_tab()
 
     @allure.title('Проверка нажатия на логотип "Самокат"')
     @allure.description('Проверка перехода на главную страницу при нажатии на логотип "Самокат"')

@@ -1,6 +1,5 @@
 import pytest
 from selenium import webdriver
-from pages.home_page import HomePage
 from pages.home_page import HomePageSamokat
 from data_tests import BASE_URL
 
